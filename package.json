@@ -1,0 +1,30 @@
+{
+  "name": "qrcode-collection-system",
+  "version": "1.0.0",
+  "description": "QR码收集系统 - 支持Chrome扩展收集、服务器存储和管理后台管理",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev:server & npm run dev:admin",
+    "dev:server": "cd server && npm run dev",
+    "dev:admin": "cd admin-panel && npm run dev",
+    "build": "npm run build:admin",
+    "build:admin": "cd admin-panel && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../admin-panel && npm install",
+    "lint": "cd server && npm run lint",
+    "lint:admin": "cd admin-panel && npm run lint"
+  },
+  "keywords": [
+    "qrcode",
+    "chrome-extension",
+    "express",
+    "vue"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "ssh2": "^1.17.0"
+  }
+}

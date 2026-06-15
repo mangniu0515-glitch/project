@@ -1,0 +1,30 @@
+{
+  "name": "qrcode-collection-server",
+  "version": "1.0.0",
+  "description": "QR Code Collection System Server",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "imapflow": "^1.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailparser": "^3.9.9",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "sql.js": "^1.14.1",
+    "string_decoder": "^1.3.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

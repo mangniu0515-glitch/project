@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+build/
+coverage/
+
+# Runtime data and uploads
+server/data/
+server/uploads/
+uploads/
+*.db
+*.sqlite
+*.sqlite3
+*.pem
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+
+# Local tooling state
+.codegraph/
+.codex-logs/
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Backup snapshots
+backups/
+*.zip
+*.tar
+*.tar.gz
