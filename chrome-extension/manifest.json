@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "二维码采集器",
+  "name": "网页验证码助手",
   "version": "1.1.0",
-  "description": "在网页中自动采集二维码并管理验证码邮箱绑定",
+  "description": "在受管网页中自动处理二维码采集、邮箱验证码回填和页面隐藏规则",
   "permissions": [
     "activeTab",
     "storage",
@@ -19,7 +19,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "二维码采集器"
+    "default_title": "网页验证码助手"
   },
   "background": {
     "service_worker": "background.js",

@@ -1,7 +1,7 @@
 {
   "name": "qrcode-collection-system",
   "version": "1.0.0",
-  "description": "QR码收集系统 - 支持Chrome扩展收集、服务器存储和管理后台管理",
+  "description": "内网网页验证码采集与授权管理系统，支持 Chrome 扩展、二维码自动上传、邮箱验证码回填和后台统一管理",
   "main": "index.js",
   "scripts": {
     "dev": "npm run dev:server & npm run dev:admin",
@@ -15,9 +15,11 @@
   },
   "keywords": [
     "qrcode",
+    "email-verification",
     "chrome-extension",
     "express",
-    "vue"
+    "vue",
+    "internal-tools"
   ],
   "author": "",
   "license": "MIT",

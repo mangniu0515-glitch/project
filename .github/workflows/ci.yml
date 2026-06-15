@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install server dependencies
+        run: npm ci
+        working-directory: server
+
+      - name: Install admin dependencies
+        run: npm ci
+        working-directory: admin-panel
+
+      - name: Check backend syntax
+        shell: bash
+        run: |
+          node --check server/src/index.js
+          for file in server/src/routes/*.js server/src/middleware/*.js server/src/utils/*.js; do
+            node --check "$file"
+          done
+
+      - name: Check extension syntax
+        run: node --check chrome-extension/background.js chrome-extension/content.js chrome-extension/extension-config.js
+
+      - name: Build admin panel
+        run: npm run build
+        working-directory: admin-panel
